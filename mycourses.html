@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(170, 213, 219);
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        .inline-block{
+            display: inline-block;
+            width: 300px;
+            padding: 10px ;
+            margin: 10px;
+            border: 2px solid blue;
+            border-radius: 10px;
+            text-align: center;
+            background-color: white;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        .courses{
+            display: inline-block;
+            width: 200px;
+            height: auto;
+            padding: -20px;
+            margin: 5px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            text-align: center;
+            background-color: blue;
+            box-sizing: border-box;
+        }
+        .course-container{
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1> MY COURSES </h1>
+<div class="course-container">
+    <div class="inline-block"><h3 style="color: blue;">HTML</h3> 
+        <p>Learn the basics of HTML and create your first webpage.</p>
+        <div class="courses"><p style="color: white;">Start Courses</p></div>
+    </div>
+    <div class="inline-block"><h3 style="color: blue;">CSS</h3>
+        <p> Learn colors, fonts, borders, and beautiful webpage styling.</p>
+        <div class="courses"><p style="color: white;">Start Courses</p></div>
+    </div>
+    <div class="inline-block"><h3 style="color: blue;">JavaScript</h3>
+        <p> Learn JavaScript and make your webpages interactive.</p>
+        <div class="courses"><p style="color: white;">Start Courses</p></div>
+    </div>
+    </div>
+</body>
+</html>
