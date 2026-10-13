@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">✦ My AI</h2>
+
+        <button class="new-chat" onclick="newChat()">
+            ＋ New Chat
+        </button>
+
+        <p class="section-title">Today</p>
+
+        <div class="history">
+            <button onclick="setPrompt('Explain HTML basics')">
+                ↳ Explain HTML basics
+            </button>
+            <button onclick="setPrompt('CSS project ideas')">
+                ↳ CSS project ideas
+            </button>
+            <button onclick="setPrompt('Operating System notes')">
+                ↳ Operating System notes
+            </button>
+        </div>
+
+        <p class="section-title">Yesterday</p>
+
+        <div class="history">
+            <button onclick="setPrompt('JavaScript questions')">
+                ↳ JavaScript questions
+            </button>
+            <button onclick="setPrompt('Web development project')">
+                ↳ Web development project
+            </button>
+        </div>
+
+        <div class="sidebar-bottom">
+            <button onclick="alert('Settings coming soon!')">
+                ⚙ Settings
+            </button>
+            <button onclick="alert('Welcome to My AI Chat!')">
+                ? Help
+            </button>
+
+            <div class="profile">
+                <div class="profile-icon">A</div>
+                <div>
+                    <strong>Student</strong>
+                    <small>Free Plan</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <header class="topbar">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+            <h3>My AI ⌄</h3>
+
+            <div class="top-actions">
+                <button onclick="toggleTheme()" title="Toggle theme">☼</button>
+                <button onclick="clearChat()" title="Clear chat">⋯</button>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome" id="welcome">
+                <div class="welcome-icon">✦</div>
+                <h1>How can I help you?</h1>
+                <p>
+                    Ask me anything. I can help you learn,
+                    write, code and explore ideas.
+                </p>
+            </div>
+
+            <div class="messages" id="messages">
+
+                <div class="message">
+                    <div class="avatar user-avatar">A</div>
+                    <div class="message-content">
+                        <strong>You</strong>
+                        <p>Explain HTML in simple words.</p>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="avatar ai-avatar">✦</div>
+                    <div class="message-content">
+                        <strong>My AI</strong>
+
+                        <p>
+                            HTML stands for HyperText Markup Language.
+                            It is used to create the structure of a web page.
+                        </p>
+
+                        <p>
+                            We use headings, paragraphs, images, links
+                            and buttons to build a webpage.
+                        </p>
+
+                        <div class="code-box">
+                            <div class="code-header">
+                                HTML
+                                <button onclick="copyCode(this)">Copy</button>
+                            </div>
+
+                            <pre><code>&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;p&gt;This is my first webpage.&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Message Input -->
+        <footer class="composer-area">
+            <form class="composer" id="chatForm">
+                <button type="button" class="attach"
+                    onclick="alert('Attachments are not enabled yet.')">
+                    +
+                </button>
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Message My AI..."
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="send-btn">↑</button>
+            </form>
+
+            <p class="disclaimer">
+                My AI can make mistakes. Check important information.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
